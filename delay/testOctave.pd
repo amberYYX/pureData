@@ -1,0 +1,27 @@
+#N canvas 1041 484 831 696 10;
+#X obj 98 50 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 97 79 openpanel;
+#X msg 97 119 read -resize \$1 array1;
+#X obj 96 160 soundfiler;
+#X obj 94 256 phasor~;
+#X obj 95 289 *~;
+#X obj 98 205 expr 44100 / $f1;
+#X obj 96 329 tabread4~ array1;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array array1 108032 float 2;
+#X coords 0 1 108032 -1 200 140 1;
+#X restore 335 58 graph;
+#X obj 104 554 dac~;
+#X obj 146 428 octaveDoubler;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 3 0 5 1;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 0;
+#X connect 7 0 10 0;
+#X connect 10 0 9 0;
+#X connect 10 0 9 1;

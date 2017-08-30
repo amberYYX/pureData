@@ -1,0 +1,27 @@
+#N canvas 136 565 236 207 10;
+#X obj 17 -26 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 59 163 dac~;
+#X obj 17 -6 cycleround 200;
+#X obj 17 15 bubblepattern 50;
+#X obj 59 138 *~ 0.25;
+#X obj 17 36 random 4;
+#X obj 17 58 select 0 1 2 3;
+#X obj -1 85 bubblesound 240;
+#X obj -1 107 bubblesound 260;
+#X obj 119 85 bubblesound 250;
+#X obj 119 107 bubblesound 270;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 1 0;
+#X connect 4 0 1 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;
+#X connect 6 2 10 0;
+#X connect 6 3 9 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X connect 10 0 4 0;
